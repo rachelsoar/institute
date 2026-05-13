@@ -1,0 +1,2017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Builder Intensive — SOAR AI Institute | Kansas City, May 21–22</title>
+<meta name="description" content="2-day hands-on AI workshop in Kansas City. Build a working AI tool on your real business data. $950 early bird. Includes 1-year Workplace AI subscription.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="AI Builder Intensive — SOAR AI Institute | Kansas City, May 21–22">
+<meta property="og:description" content="Two days. One working AI tool. Your business. Hands-on workshop taught by Paul Allen, co-founder of Ancestry.com.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://institute.soar.com/ai-institute">
+<meta property="og:image" content=""><!-- PLACEHOLDER: OG image -->
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800;900&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+
+<!-- Event Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationEvent",
+  "name": "SOAR AI Institute — AI Builder Intensive",
+  "description": "2-day hands-on AI workshop. Build a working AI tool on your real business data.",
+  "startDate": "2026-05-21T09:00:00-05:00",
+  "endDate": "2026-05-22T17:00:00-05:00",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "location": {
+    "@type": "Place",
+    "name": "Kansas City / Liberty, MO",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Liberty",
+      "addressRegion": "MO",
+      "addressCountry": "US"
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "SOAR AI",
+    "url": "https://try.soar.com"
+  },
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Early Bird",
+      "price": "950",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "name": "Standard",
+      "price": "1250",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  ],
+  "performer": [
+    {"@type": "Person", "name": "Paul Allen"},
+    {"@type": "Person", "name": "Ryan Koziol"}
+  ]
+}
+</script>
+
+<style>
+/* ══════════════════════════════════════
+   SOAR AI INSTITUTE — Design Tokens
+   ══════════════════════════════════════ */
+:root {
+  --coral: #EE785A;
+  --coral-dark: #d56b50;
+  --coral-light: #f9ded6;
+  --coral-tint: #fef6f4;
+  --purple: #8A51A2;
+  --purple-soft: #7F5FAA;
+  --purple-tint: #f7f1ff;
+  --navy: #06091e;
+  --navy-mid: #0f1330;
+  --white: #ffffff;
+  --off-white: #fafaf8;
+  --mint: #dbfff5;
+  --fg: #1a1917;
+  --fg-body: #545454;
+  --fg-muted: #7a7a7a;
+  --fg-subtle: #9a9a9a;
+  --fg-on-dark: #ffffff;
+  --fg-on-dark-muted: rgba(255,255,255,0.85);
+  --border: rgba(26,25,23,0.1);
+  --border-dark: rgba(255,255,255,0.1);
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+  --r-pill: 100px;
+  --shadow-card: 0 1px 4px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.04);
+  --shadow-hover: 0 8px 30px rgba(138,81,162,0.12), 0 0 0 1px rgba(138,81,162,0.1);
+  --shadow-coral: 0 4px 20px rgba(238,120,90,0.3);
+}
+
+/* ══════════════════════════════════════
+   RESET & BASE
+   ══════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--fg-body);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Urbanist', sans-serif;
+  color: var(--fg);
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.hero-sub, .schedule-sub, .pricing-sub, .cities-sub,
+.leavewith-lead, .leavewith-closer, .story-pivot,
+.guarantee, .schedule-note, .registration-sub {
+  text-wrap: balance;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.section {
+  padding: 112px 0;
+}
+
+/* ══════════════════════════════════════
+   MATERIAL SYMBOLS
+   ══════════════════════════════════════ */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+/* ══════════════════════════════════════
+   EYEBROW
+   ══════════════════════════════════════ */
+.eyebrow {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--coral);
+}
+
+/* ══════════════════════════════════════
+   BUTTONS
+   ══════════════════════════════════════ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--coral);
+  color: #fff;
+  font-size: 16px;
+  padding: 16px 32px;
+  border-radius: var(--r-pill);
+}
+.btn-primary:hover {
+  background: var(--coral-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-coral);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--fg-muted);
+  font-size: 15px;
+  padding: 12px 24px;
+  border-radius: var(--r-pill);
+  border: 1.5px solid var(--border);
+}
+.btn-ghost:hover {
+  color: var(--fg);
+  border-color: var(--fg-muted);
+}
+
+.btn-outline-light {
+  background: transparent;
+  color: #fff;
+  font-size: 15px;
+  padding: 14px 28px;
+  border-radius: var(--r-pill);
+  border: 1.5px solid rgba(255,255,255,0.3);
+}
+.btn-outline-light:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.5);
+}
+
+/* ══════════════════════════════════════
+   FADE-UP ANIMATION
+   ══════════════════════════════════════ */
+.fade-up {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ══════════════════════════════════════
+   NAV
+   ══════════════════════════════════════ */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(16px) saturate(1.2);
+  border-bottom: 1px solid var(--border);
+  height: 64px;
+  padding: 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav-logo svg { height: 28px; width: auto; }
+.nav-logo-text {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--fg);
+  letter-spacing: 0.02em;
+}
+.nav-logo-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--border);
+  margin: 0 4px;
+}
+.nav-logo-sub {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--fg-muted);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+.nav-links a {
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  color: var(--fg-muted);
+  transition: color 0.15s;
+}
+.nav-links a:hover { color: var(--fg); }
+
+.nav-cta {
+  background: var(--coral);
+  color: #fff !important;
+  font-family: 'Urbanist', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  padding: 10px 22px;
+  border-radius: var(--r-pill);
+  transition: background 0.15s, transform 0.15s;
+}
+.nav-cta:hover {
+  background: var(--coral-dark);
+  transform: translateY(-1px);
+}
+
+/* ══════════════════════════════════════
+   HERO
+   ══════════════════════════════════════ */
+.hero {
+  padding: 100px 0 112px;
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.hero-content { max-width: 540px; }
+
+.hero-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--coral-tint);
+  color: var(--coral-dark);
+  font-family: 'Urbanist', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: var(--r-pill);
+  margin-bottom: 28px;
+}
+
+.hero h1 {
+  font-size: clamp(40px, 5.5vw, 60px);
+  font-weight: 800;
+  line-height: 1.08;
+  margin-bottom: 24px;
+  color: var(--fg);
+}
+
+.hero-sub {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--fg-body);
+  margin-bottom: 24px;
+  max-width: 480px;
+}
+
+.hero-credential {
+  font-size: 15px;
+  color: var(--fg-muted);
+  margin-bottom: 40px;
+  font-style: italic;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  word-spacing: 0.05em;
+}
+.hero-credential strong {
+  color: var(--fg);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.hero-ctas {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image-placeholder {
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, var(--coral-tint) 0%, var(--purple-tint) 100%);
+  border-radius: var(--r-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+}
+.hero-image-placeholder span {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 14px;
+  color: var(--fg-subtle);
+  font-weight: 500;
+}
+
+/* ══════════════════════════════════════
+   TRUST BAR
+   ══════════════════════════════════════ */
+.trust-bar {
+  padding: 40px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--off-white);
+}
+.trust-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--fg-muted);
+  font-weight: 500;
+}
+.trust-item .material-symbols-outlined {
+  font-size: 20px;
+  color: var(--coral);
+}
+
+/* ══════════════════════════════════════
+   TRANSFORMATION STORY
+   ══════════════════════════════════════ */
+.story-section {
+  padding: 112px 0;
+  background: var(--navy);
+  color: var(--fg-on-dark);
+  position: relative;
+}
+.story-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.story-section .eyebrow {
+  color: var(--coral);
+  margin-bottom: 32px;
+}
+.story-section h2 {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 40px;
+  line-height: 1.15;
+}
+.story-text {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--fg-on-dark-muted);
+  font-weight: 400;
+}
+.story-text p { margin-bottom: 24px; }
+.story-text p:last-child { margin-bottom: 0; }
+.story-pivot {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  font-family: 'Urbanist', sans-serif;
+  margin-top: 36px;
+  padding-top: 36px;
+  border-top: 1px solid var(--border-dark);
+}
+
+/* ══════════════════════════════════════
+   WHAT YOU'LL DO — SCHEDULE
+   ══════════════════════════════════════ */
+.schedule-section {
+  padding: 112px 0;
+  background: var(--white);
+}
+.schedule-section h2 {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.schedule-sub {
+  text-align: center;
+  font-size: 18px;
+  color: var(--fg-body);
+  max-width: 640px;
+  margin: 0 auto 56px;
+  line-height: 1.7;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.schedule-day {
+  background: var(--off-white);
+  border-radius: var(--r-xl);
+  padding: 36px;
+  border: 1px solid var(--border);
+}
+
+.day-label {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--coral);
+  margin-bottom: 6px;
+}
+
+.day-title {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--fg);
+  margin-bottom: 28px;
+}
+
+.schedule-item {
+  display: flex;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+.schedule-item:last-child { border-bottom: none; }
+
+.schedule-time {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--fg-muted);
+  min-width: 72px;
+  padding-top: 2px;
+}
+
+.schedule-label {
+  font-size: 15px;
+  color: var(--fg);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.schedule-note {
+  text-align: center;
+  margin-top: 32px;
+  font-size: 13px;
+  color: var(--fg-subtle);
+  font-style: italic;
+}
+
+/* ══════════════════════════════════════
+   WHAT YOU'LL LEAVE WITH
+   ══════════════════════════════════════ */
+.leavewith-section {
+  padding: 112px 0;
+  background: #5B3578;
+}
+.leavewith-section .eyebrow {
+  color: var(--coral);
+}
+.leavewith-section h2 {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.leavewith-lead {
+  font-size: 19px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.85);
+  max-width: 680px;
+  margin-bottom: 48px;
+  font-weight: 400;
+}
+.leavewith-lead strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.usecases-list {
+  columns: 2;
+  column-gap: 48px;
+  list-style: none;
+}
+.usecases-list li {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.85);
+  padding: 10px 0;
+  padding-left: 28px;
+  position: relative;
+  break-inside: avoid;
+  font-weight: 400;
+}
+.usecases-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 18px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--coral);
+}
+
+.leavewith-closer {
+  margin-top: 48px;
+  font-size: 19px;
+  font-weight: 600;
+  color: #fff;
+  font-family: 'Urbanist', sans-serif;
+  max-width: 600px;
+}
+
+/* ══════════════════════════════════════
+   WAI TEASE
+   ══════════════════════════════════════ */
+.wai-tease {
+  padding: 80px 0;
+  background: var(--white);
+}
+.wai-card {
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: 48px;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+.wai-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: var(--purple-tint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.wai-icon .material-symbols-outlined {
+  font-size: 28px;
+  color: var(--purple);
+}
+.wai-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.wai-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--fg-body);
+  margin-bottom: 12px;
+}
+.wai-link {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--purple);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 8px;
+}
+.wai-link:hover { text-decoration: underline; }
+
+/* ══════════════════════════════════════
+   STRENGTHS PHILOSOPHY
+   ══════════════════════════════════════ */
+.strengths-section {
+  padding: 112px 0;
+  background: var(--white);
+}
+.strengths-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.strengths-section h2 {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+.strengths-text p {
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--fg-body);
+  margin-bottom: 20px;
+}
+.strengths-visual {
+  background: linear-gradient(145deg, var(--coral-tint) 0%, var(--mint) 100%);
+  border-radius: var(--r-xl);
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+}
+.strengths-visual .material-symbols-outlined {
+  font-size: 80px;
+  color: var(--coral);
+  opacity: 0.4;
+}
+
+/* ══════════════════════════════════════
+   INSTRUCTORS
+   ══════════════════════════════════════ */
+.instructors-section {
+  padding: 112px 0;
+  background: var(--off-white);
+}
+.instructors-section h2 {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 56px;
+}
+.instructors-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.instructor-card {
+  background: var(--white);
+  border-radius: var(--r-xl);
+  padding: 40px;
+  border: 1px solid var(--border);
+  text-align: center;
+}
+.instructor-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--coral-tint);
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--coral-light);
+}
+.instructor-photo .material-symbols-outlined {
+  font-size: 48px;
+  color: var(--coral);
+  opacity: 0.5;
+}
+.instructor-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.instructor-role {
+  font-size: 14px;
+  color: var(--coral);
+  font-weight: 600;
+  font-family: 'Urbanist', sans-serif;
+  margin-bottom: 16px;
+}
+.instructor-bio {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--fg-body);
+}
+
+/* ══════════════════════════════════════
+   PRICING
+   ══════════════════════════════════════ */
+.pricing-section {
+  padding: 112px 0;
+  background: var(--white);
+}
+.pricing-section h2 {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.pricing-sub {
+  text-align: center;
+  font-size: 17px;
+  color: var(--fg-body);
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.pricing-details {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.pricing-detail-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--fg-muted);
+  margin: 0 16px;
+}
+.pricing-detail-row .material-symbols-outlined {
+  font-size: 18px;
+  color: var(--coral);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 960px;
+  margin: 0 auto 64px;
+}
+
+.price-card {
+  background: var(--off-white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: 36px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+.price-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+.price-card.featured {
+  border-color: var(--coral);
+  background: var(--white);
+}
+.price-card.featured::before {
+  content: 'Most Popular';
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--coral);
+  color: #fff;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 16px;
+  border-radius: var(--r-pill);
+  letter-spacing: 0.04em;
+}
+
+.price-tier {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--fg-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+
+.price-amount {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--fg);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.price-amount span {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--fg-muted);
+}
+
+.price-desc {
+  font-size: 14px;
+  color: var(--fg-muted);
+  margin-bottom: 24px;
+  min-height: 40px;
+}
+
+.price-card .btn-primary {
+  width: 100%;
+  justify-content: center;
+}
+
+.included-section {
+  max-width: 700px;
+  margin: 0 auto 64px;
+}
+.included-title {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 24px;
+  color: var(--fg);
+}
+.included-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 32px;
+}
+.included-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15px;
+  color: var(--fg-body);
+  padding: 8px 0;
+}
+.included-item .material-symbols-outlined {
+  font-size: 20px;
+  color: var(--coral);
+  margin-top: 2px;
+}
+
+.guarantee {
+  text-align: center;
+  font-size: 15px;
+  color: var(--fg-muted);
+  font-style: italic;
+  max-width: 600px;
+  margin: 32px auto 0;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+
+/* ══════════════════════════════════════
+   REGISTRATION FORM
+   ══════════════════════════════════════ */
+.registration-section {
+  padding: 80px 0 112px;
+  background: #5B3578;
+}
+.registration-section h2 {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #fff;
+}
+.registration-sub {
+  text-align: center;
+  font-size: 16px;
+  color: var(--fg-muted);
+  margin-bottom: 48px;
+}
+
+.reg-form {
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: var(--r-xl);
+  padding: 40px;
+  border: 1px solid var(--border);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.form-row.full { grid-template-columns: 1fr; }
+
+.form-group label {
+  display: block;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--fg);
+  margin-bottom: 6px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  padding: 12px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-sm);
+  background: var(--white);
+  color: var(--fg);
+  transition: border-color 0.15s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--coral);
+}
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.pricing-radios {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.pricing-radio {
+  flex: 1;
+  min-width: 120px;
+}
+.pricing-radio input { display: none; }
+.pricing-radio label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 12px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-md);
+  cursor: pointer;
+  transition: all 0.15s;
+  text-align: center;
+}
+.pricing-radio label:hover { border-color: var(--coral); }
+.pricing-radio input:checked + label {
+  border-color: var(--coral);
+  background: var(--coral-tint);
+}
+.pricing-radio .radio-tier {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--fg);
+}
+.pricing-radio .radio-price {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--coral);
+}
+
+.form-submit {
+  margin-top: 24px;
+}
+.form-submit .btn-primary {
+  width: 100%;
+  justify-content: center;
+  font-size: 17px;
+  padding: 18px 32px;
+}
+
+.form-note {
+  text-align: center;
+  font-size: 13px;
+  color: var(--fg-subtle);
+  margin-top: 16px;
+}
+
+/* ══════════════════════════════════════
+   FIND YOUR CITY
+   ══════════════════════════════════════ */
+.cities-section {
+  padding: 112px 0;
+  background: var(--white);
+}
+.cities-section h2 {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.cities-sub {
+  text-align: center;
+  font-size: 17px;
+  color: var(--fg-body);
+  max-width: 560px;
+  margin: 0 auto 56px;
+}
+.cities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.city-card {
+  background: var(--off-white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 28px 24px;
+  text-align: center;
+  transition: all 0.2s;
+}
+.city-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}
+.city-card.active {
+  border-color: var(--coral);
+  background: var(--coral-tint);
+  position: relative;
+}
+.city-card.active::before {
+  content: 'First Session';
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--coral);
+  color: #fff;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: var(--r-pill);
+  white-space: nowrap;
+}
+.city-name {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--fg);
+  margin-bottom: 4px;
+}
+.city-status {
+  font-size: 13px;
+  color: var(--fg-muted);
+  margin-bottom: 16px;
+}
+.city-card .btn {
+  font-size: 13px;
+  padding: 8px 20px;
+}
+.city-card.active .btn {
+  background: var(--coral);
+  color: #fff;
+  border-radius: var(--r-pill);
+}
+.city-card:not(.active) .btn {
+  background: transparent;
+  color: var(--fg-muted);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-pill);
+}
+.city-card:not(.active) .btn:hover {
+  border-color: var(--coral);
+  color: var(--coral);
+}
+
+.cities-cta {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 15px;
+  color: var(--fg-muted);
+}
+.cities-cta a {
+  color: var(--coral);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* ══════════════════════════════════════
+   FAQ
+   ══════════════════════════════════════ */
+.faq-section {
+  padding: 112px 0;
+  background: var(--off-white);
+}
+.faq-section h2 {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 56px;
+}
+.faq-list {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+.faq-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 24px 0;
+  cursor: pointer;
+  text-align: left;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--fg);
+}
+.faq-trigger .material-symbols-outlined {
+  font-size: 24px;
+  color: var(--fg-muted);
+  transition: transform 0.25s;
+}
+.faq-item.open .faq-trigger .material-symbols-outlined {
+  transform: rotate(45deg);
+  color: var(--coral);
+}
+.faq-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+.faq-body-inner {
+  padding: 0 0 24px;
+  font-size: 15px;
+  color: var(--fg-body);
+  line-height: 1.75;
+  max-width: 640px;
+}
+
+/* ══════════════════════════════════════
+   FOOTER CTA
+   ══════════════════════════════════════ */
+.footer-cta {
+  padding: 112px 0;
+  background: var(--navy);
+  text-align: center;
+}
+.footer-cta h2 {
+  font-size: clamp(32px, 4.5vw, 52px);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.footer-cta p {
+  font-size: 18px;
+  color: var(--fg-on-dark-muted);
+  margin-bottom: 36px;
+}
+.footer-cta .btn-primary {
+  font-size: 18px;
+  padding: 18px 40px;
+}
+
+/* ══════════════════════════════════════
+   FOOTER
+   ══════════════════════════════════════ */
+.footer {
+  padding: 48px 0;
+  background: var(--navy);
+  border-top: 1px solid var(--border-dark);
+}
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer-logo svg { height: 22px; }
+.footer-logo span {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 13px;
+  color: var(--fg-on-dark-muted);
+  font-weight: 500;
+}
+.footer-links {
+  display: flex;
+  gap: 24px;
+}
+.footer-links a {
+  font-size: 13px;
+  color: var(--fg-on-dark-muted);
+  transition: color 0.15s;
+}
+.footer-links a:hover { color: #fff; }
+.footer-copy {
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+}
+
+/* ══════════════════════════════════════
+   MOBILE
+   ══════════════════════════════════════ */
+@media (max-width: 768px) {
+  .container { padding: 0 20px; }
+  .section { padding: 72px 0; }
+  .nav { padding: 0 16px; }
+  .nav-links { display: none; }
+  .nav-logo-divider, .nav-logo-sub { display: none; }
+
+  .hero { padding: 60px 0 72px; }
+  .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .hero-visual { order: -1; }
+  .hero-image-placeholder { max-width: 100%; aspect-ratio: 16/9; }
+  .hero-ctas { flex-direction: column; align-items: stretch; }
+  .hero-ctas .btn { text-align: center; justify-content: center; }
+
+  .trust-bar-inner { flex-direction: column; gap: 16px; }
+
+  .story-section { padding: 72px 0; }
+
+  .schedule-grid { grid-template-columns: 1fr; }
+
+  .usecases-list { columns: 1; }
+
+  .wai-card { flex-direction: column; padding: 32px; }
+
+  .strengths-inner { grid-template-columns: 1fr; }
+  .strengths-visual { aspect-ratio: 16/9; order: -1; }
+
+  .instructors-grid { grid-template-columns: 1fr; }
+
+  .pricing-grid { grid-template-columns: 1fr; }
+  .included-grid { grid-template-columns: 1fr; }
+
+  .form-row { grid-template-columns: 1fr; }
+  .pricing-radios { flex-direction: column; }
+
+  .cities-grid { grid-template-columns: 1fr 1fr; }
+
+  .footer-cta { padding: 72px 0; }
+
+  .footer-inner { flex-direction: column; gap: 20px; text-align: center; }
+  .footer-links { gap: 16px; }
+
+  /* Mobile sticky register */
+  .mobile-sticky {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(12px);
+    padding: 12px 16px;
+    border-top: 1px solid var(--border);
+  }
+  .mobile-sticky .btn-primary {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-sticky { display: none; }
+}
+
+@media (max-width: 480px) {
+  .cities-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Skip to content for keyboard users -->
+<a href="#schedule" class="skip-link" style="position:absolute;top:-40px;left:0;background:var(--coral);color:#fff;padding:8px 16px;z-index:200;font-family:'Urbanist',sans-serif;font-size:14px;font-weight:600;transition:top 0.2s;">Skip to content</a>
+<style>.skip-link:focus{top:0;}</style>
+
+<!-- ═══════════════════════ NAV ═══════════════════════ -->
+<nav class="nav">
+  <a href="#" class="nav-logo" onclick="event.preventDefault();window.scrollTo({top:0,behavior:'smooth'})">
+    <svg viewBox="0 0 98.2 142.65" xmlns="http://www.w3.org/2000/svg" style="height:28px;width:auto;">
+      <path fill="#e57e61" d="M73.35,78.48c4.3,21.62,3.91,36.66-13.2,51.9-7.5,6.68-16.42,11.12-26.43,12.13-12.86,1.3-24.08-6.68-26.62-19.28-2.89-14.38,25.95-17.09,39.56-19.59l20.66-3.8c1.69-15.89-12.99-49.53-2.41-55.74,12.18-7.15,40.38,26.51,31.65,47.27-2.56,6.1-9.03,11.17-15.36,12.21-2.32.38-2.95-2.98-2.84-4.35.15-2,1.5-3.67,3.65-4.63,5.97-2.68,9.31-8.55,7.81-15.25-2.55-11.39-9.83-21.91-20.39-28.29-.4,9.77,2.14,18.39,3.93,27.41ZM32.43,134.29c14.71-1.63,27.39-11.55,33.21-25.3l-32.75,5.36c-4.91.8-9.36,2.05-13.81,4.21-1.28.77-3.77,2.18-3.38,4.12,1.48,7.35,8.52,12.52,16.74,11.6Z"/>
+      <path fill="#e57e61" d="M.66,65.76c-2.52-11.16,2.32-20.79,12.1-25.34,1.63-.76,3.54-2.35,5.6-.98,2.31,1.54,2.15,6.7-.75,7.86-6.74,2.7-10.78,8.85-8.97,16.38,2.69,11.16,9.73,21.23,20.17,27.87.79-8.37-1.33-15.99-3.05-23.7-4.02-17.99-5.91-34.97,6.3-49.33C40.32,8.81,50.97,1.85,63.69.22c13.61-1.74,26.24,6.78,27.68,20.67.43,4.13-3.22,7.83-6.68,9.73-13.86,7.63-36.96,7.51-53.71,12.28-1.41,16.22,13.87,51.89,1.53,56.01-4.35,1.45-8.85-.32-12.43-3.17-9.46-7.52-16.68-17.86-19.42-29.99ZM82.63,20.06c-1.26-7.65-8.82-12.69-16.85-11.8-14.5,1.61-27.3,11.73-33.16,25.44l23.63-3.81c8.81-1.42,27.27-4.48,26.38-9.83Z"/>
+    </svg>
+    <span class="nav-logo-text">SOAR</span>
+    <span class="nav-logo-divider"></span>
+    <span class="nav-logo-sub">AI Institute</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#schedule">Schedule</a></li>
+    <li><a href="#instructors">Instructors</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#cities">Cities</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#register" class="nav-cta">Reserve Your Seat</a></li>
+  </ul>
+</nav>
+
+<!-- ═══════════════════════ HERO ═══════════════════════ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content fade-up">
+        <div class="hero-date">
+          <span class="material-symbols-outlined" style="font-size:16px;">event</span>
+          May 21–22, 2026 — Kansas City
+        </div>
+        <h1>Build your first AI agent.</h1>
+        <p class="hero-sub">2-day hands-on workshop. Leave with a working AI assistant built on your real business data.</p>
+        <p class="hero-credential">Taught by&nbsp; <strong>Paul Allen</strong>, co-founder of Ancestry.com, and&nbsp; <strong>Ryan Koziol</strong>, Lead AI Practitioner.</p>
+        <div class="hero-ctas">
+          <a href="#register" class="btn btn-primary">Reserve Your Seat — $950 Early Bird</a>
+          <a href="#cities" class="btn btn-ghost">Not in Kansas City? Find your city</a>
+        </div>
+      </div>
+      <div class="hero-visual fade-up" style="transition-delay:0.1s;">
+        <div class="hero-image-placeholder">
+          <span>Hero image / event photo</span>
+          <!-- PLACEHOLDER: Replace with event photo or illustration -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ TRUST BAR ═══════════════════════ -->
+<div class="trust-bar">
+  <div class="container">
+    <div class="trust-bar-inner fade-up">
+      <div class="trust-item">
+        <span class="material-symbols-outlined">verified</span>
+        Powered by SOAR AI
+      </div>
+      <div class="trust-item">
+        <span class="material-symbols-outlined">build</span>
+        Hands-on — you build, not just watch
+      </div>
+      <div class="trust-item">
+        <span class="material-symbols-outlined">rocket_launch</span>
+        Leave with a working AI tool
+      </div>
+      <div class="trust-item">
+        <span class="material-symbols-outlined">group</span>
+        Small group — limited seats
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ TRANSFORMATION STORY ═══════════════════════ -->
+<section class="story-section">
+  <div class="container">
+    <div class="story-inner fade-up">
+      <p class="eyebrow">A story from the room</p>
+      <h2>She walked in skeptical.<br>She left asking for more.</h2>
+      <div class="story-text">
+        <p>A senior leader at a Washington DC education nonprofit sat down at a two-day session convinced that AI was overhyped, ethically fraught, and not relevant to her work. She raised every objection. She questioned every claim. She was exactly the kind of person who should have been in the room.</p>
+        <p>By the end of day two, she wasn't just convinced — she was leaning in. She wanted to know how the team had built what she was looking at overnight. She wanted to know whether her organization could have it. The gap between "this isn't for me" and "how do I get started" closed in two days.</p>
+      </div>
+      <p class="story-pivot">That transformation happens in two days. It starts with showing up.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ SCHEDULE ═══════════════════════ -->
+<section class="schedule-section section" id="schedule">
+  <div class="container">
+    <p class="eyebrow fade-up" style="text-align:center;margin-bottom:16px;">What you'll actually do</p>
+    <h2 class="fade-up" style="text-align:center;max-width:800px;margin:0 auto 16px;"><span style="color:var(--coral);">Day 1:</span> See what's possible.<br><span style="color:var(--coral);">Day 2:</span> Build what's yours.</h2>
+    <p class="schedule-sub fade-up">You'll arrive with a problem — something you've been meaning to solve, a task that eats your week. By the end of day two, you'll leave with an AI assistant built around that exact problem, ready to run.</p>
+
+    <div class="schedule-grid">
+      <div class="schedule-day fade-up">
+        <p class="day-label">Day 1</p>
+        <p class="day-title">Foundation + Build</p>
+        <div class="schedule-item">
+          <span class="schedule-time">9:00 AM</span>
+          <span class="schedule-label">Welcome + setup — connect your accounts, choose your build</span>
+        </div>
+        <div class="schedule-item">
+          <span class="schedule-time">9:30 AM</span>
+          <span class="schedule-label">AI foundations — what works, what doesn't, what matters for your business</span>
+        </div>
+        <div class="schedule-item">
+          <span class="schedule-time">10:30 AM</span>
+          <span class="schedule-label">Tool setup — configure your AI stack with guided instruction</span>
+        </div>
+        <div class="schedule-item">
+          <span class="schedule-time">12:00 PM</span>
+          <span class="schedule-label">Lunch</span>
+        </div>
+        <div class="schedule-item">
+          <span class="schedule-time">1:00 PM</span>
+          <span class="schedule-label">Build session 1 — scaffold your AI assistant step by step</span>
+        </div>
+        <div class="schedule-item">
+          <span class="schedule-time">3:15 PM</span>
+          <span class="schedule-label">Build session 2 — connect to your real data and workflows</span>
+        </div>
+        <div class="schedule-item">
+          <span class="schedule-time">5:00 PM</span>
+          <span class="schedule-label">Day 1 wrap — what's working, what to refine tomorrow</span>
+        </div>
+        <div class="schedule-item">
+          <span class="schedule-time">6:30 PM</span>
+          <span class="schedule-label">Group dinner — connection and community</span>
+        </div>
+      </div>
+
+      <div class="schedule-day fade-up" style="transition-delay:0.1s;">
+        <p class="day-label">Day 2</p>
+        <p class="day-title">Refine + Launch</p>
+        <div class="schedule-item">
+          <span class="schedule-time">9:00 AM</span>
+          <span class="schedule-label">Review + troubleshoot overnight questions</span>
+        </div>
+        <div class="schedule-item">
+          <span class="schedule-time">9:30 AM</span>
+          <span class="schedule-label">Advanced patterns — automation triggers, integrations, scaling</span>
+        </div>
+        <div class="schedule-item">
+          <span class="schedule-time">11:00 AM</span>
+          <span class="schedule-label">Build session 3 — refine, test, polish</span>
+        </div>
+        <div class="schedule-item">
+          <span class="schedule-time">12:00 PM</span>
+          <span class="schedule-label">Lunch</span>
+        </div>
+        <div class="schedule-item">
+          <span class="schedule-time">1:00 PM</span>
+          <span class="schedule-label">Build session 4 — final build sprint</span>
+        </div>
+        <div class="schedule-item">
+          <span class="schedule-time">3:00 PM</span>
+          <span class="schedule-label">Demo day — present what you built to the group</span>
+        </div>
+        <div class="schedule-item">
+          <span class="schedule-time">4:00 PM</span>
+          <span class="schedule-label">Next steps — your 30-day action plan + alumni community</span>
+        </div>
+        <div class="schedule-item">
+          <span class="schedule-time">4:30 PM</span>
+          <span class="schedule-label">Certificates + close</span>
+        </div>
+      </div>
+    </div>
+    <p class="schedule-note fade-up">Schedule is approximate and may be adjusted. No coding or technical background required — if you can describe what you want, you can build it.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════ WHAT YOU'LL LEAVE WITH ═══════════════════════ -->
+<section class="leavewith-section section">
+  <div class="container">
+    <p class="eyebrow fade-up" style="margin-bottom:16px;">What you'll leave with</p>
+    <h2 class="fade-up">Your first AI agent.</h2>
+    <p class="leavewith-lead fade-up"><strong>A custom-built assistant trained on your actual work and your actual problems</strong>, handling the tasks that eat your week, running even when you're not at your desk.</p>
+
+    <ul class="usecases-list fade-up">
+      <li>Automate the weekly report your whole team dreads</li>
+      <li>Draft the grant proposal that's been sitting in your to-do list for three weeks</li>
+      <li>Clear your inbox backlog before Monday morning</li>
+      <li>Plan the family road trip down to the packing list</li>
+      <li>Prep talking points for your next board presentation</li>
+      <li>Write the performance reviews you've been putting off</li>
+      <li>Organize the home renovation project room by room</li>
+      <li>Handle follow-up emails before you've left the parking lot</li>
+      <li>Draft donor thank-you letters that actually feel personal</li>
+      <li>Finally write the thing you've been meaning to write</li>
+      <li>Whatever's been living on your mental list the longest</li>
+    </ul>
+
+    <p class="leavewith-closer fade-up">Your agent handles what drains you. You get to spend your time on what you're actually here to do.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════ WAI TEASE ═══════════════════════ -->
+<section class="wai-tease">
+  <div class="container">
+    <div class="wai-card fade-up">
+      <div class="wai-icon">
+        <span class="material-symbols-outlined">hub</span>
+      </div>
+      <div>
+        <h3>A glimpse of what teams are already doing</h3>
+        <p>During the training, you'll watch your assistant listen to a meeting in real time — pulling out decisions, drafting follow-ups, assigning action items before the conversation ends. That's not a demo feature. It's how the most effective teams are already working.</p>
+        <p>For teams that want to go further, Workplace AI extends everything you'll build into a full fleet of assistants that collaborate, remember, and work across your entire organization. Most people ask us about it on day two.</p>
+        <a href="https://workplace-ai.com" target="_blank" rel="noopener" class="wai-link">Learn more about Workplace AI <span class="material-symbols-outlined" style="font-size:16px;">arrow_forward</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ STRENGTHS ═══════════════════════ -->
+<section class="strengths-section section">
+  <div class="container">
+    <div class="strengths-inner">
+      <div class="strengths-text fade-up">
+        <p class="eyebrow" style="margin-bottom:16px;">What makes this different</p>
+        <h2>Built around how you're wired.</h2>
+        <p>The best version of AI at work isn't one that replaces what you do. It's one that handles everything you don't love doing — so you can spend more time on the things you're actually wired for.</p>
+        <p>That's the foundation this training is built on. Before you arrive, you'll reflect on where your natural strengths live — the work that energizes you, the problems you're made to solve. The assistant you build will be designed around those strengths. Not a generic tool. Yours.</p>
+      </div>
+      <div class="strengths-visual fade-up" style="transition-delay:0.1s;">
+        <span class="material-symbols-outlined">psychology</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ INSTRUCTORS ═══════════════════════ -->
+<section class="instructors-section section" id="instructors">
+  <div class="container">
+    <p class="eyebrow fade-up" style="text-align:center;margin-bottom:16px;">Your instructors</p>
+    <h2 class="fade-up">Builders, not lecturers.</h2>
+    <div class="instructors-grid">
+      <div class="instructor-card fade-up">
+        <div class="instructor-photo">
+          <!-- PLACEHOLDER: Paul's headshot -->
+          <span class="material-symbols-outlined">person</span>
+        </div>
+        <h3>Paul Allen</h3>
+        <p class="instructor-role">Co-founder of Ancestry.com</p>
+        <p class="instructor-bio">Paul spent decades at the intersection of technology and human connection — building tools that helped millions of people understand who they are and where they came from. He started SOAR AI Institute because he kept watching the same thing happen: smart, capable people assuming AI wasn't for them. Two days later, they couldn't imagine working without it.</p>
+      </div>
+      <div class="instructor-card fade-up" style="transition-delay:0.1s;">
+        <div class="instructor-photo">
+          <!-- PLACEHOLDER: Ryan's headshot -->
+          <span class="material-symbols-outlined">person</span>
+        </div>
+        <h3>Ryan Koziol</h3>
+        <p class="instructor-role">Lead AI Practitioner, SOAR AI</p>
+        <p class="instructor-bio">Ryan builds AI tools for real organizations — not demos, not prototypes, the actual systems teams rely on every day. He's the person in the room making sure what you build works, connects to your real data, and keeps running after you leave. If you get stuck, he gets you unstuck.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ PRICING ═══════════════════════ -->
+<section class="pricing-section section" id="pricing">
+  <div class="container">
+    <p class="eyebrow fade-up" style="text-align:center;margin-bottom:16px;">Pricing</p>
+    <h2 class="fade-up">Invest two days. Change how you work.</h2>
+    <p class="pricing-sub fade-up">Early bird pricing is below the $1,000 threshold most companies can approve without executive sign-off.</p>
+
+    <div class="pricing-details fade-up">
+      <span class="pricing-detail-row"><span class="material-symbols-outlined">event</span> May 21–22, Kansas City</span>
+      <span class="pricing-detail-row"><span class="material-symbols-outlined">schedule</span> 1.5 days intensive</span>
+      <span class="pricing-detail-row"><span class="material-symbols-outlined">laptop_mac</span> Bring your laptop</span>
+    </div>
+
+    <div class="pricing-grid fade-up">
+      <div class="price-card featured">
+        <p class="price-tier">Early Bird</p>
+        <p class="price-amount"><span>$</span>950</p>
+        <p class="price-desc">Limited availability. Lock in below $1K.</p>
+        <a href="#register" class="btn btn-primary">Reserve Your Seat</a>
+      </div>
+      <div class="price-card">
+        <p class="price-tier">Standard</p>
+        <p class="price-amount"><span>$</span>1,250</p>
+        <p class="price-desc">Full price after early bird ends.</p>
+        <a href="#register" class="btn btn-primary" style="background:var(--purple);"><span>Reserve Your Seat</span></a>
+      </div>
+      <div class="price-card">
+        <p class="price-tier">Team Bundle</p>
+        <p class="price-amount"><span>$</span>5,000</p>
+        <p class="price-desc">5 seats — buy 4, get 1 free. Best value for teams.</p>
+        <a href="#register" class="btn btn-primary" style="background:var(--purple);"><span>Reserve Your Seat</span></a>
+      </div>
+    </div>
+
+    <div class="included-section fade-up">
+      <p class="included-title">Included with every ticket</p>
+      <div class="included-grid">
+        <div class="included-item">
+          <span class="material-symbols-outlined">check_circle</span>
+          <span>2 full days of hands-on instruction</span>
+        </div>
+        <div class="included-item">
+          <span class="material-symbols-outlined">check_circle</span>
+          <span>Your working AI assistant, configured on your data</span>
+        </div>
+        <div class="included-item">
+          <span class="material-symbols-outlined">check_circle</span>
+          <span>1-year Workplace AI subscription</span>
+        </div>
+        <div class="included-item">
+          <span class="material-symbols-outlined">check_circle</span>
+          <span>SOAR AI Institute certificate of completion</span>
+        </div>
+        <div class="included-item">
+          <span class="material-symbols-outlined">check_circle</span>
+          <span>Group dinner between day one and day two</span>
+        </div>
+        <div class="included-item">
+          <span class="material-symbols-outlined">check_circle</span>
+          <span>30-day alumni support access post-event</span>
+        </div>
+        <div class="included-item">
+          <span class="material-symbols-outlined">check_circle</span>
+          <span>Access to the SOAR alumni community</span>
+        </div>
+        <div class="included-item">
+          <span class="material-symbols-outlined">check_circle</span>
+          <span>Lunch both days + coffee and snacks</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="guarantee fade-up">If you don't leave with something useful and a new way of seeing what's possible, we'll refund your ticket. No friction.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════ REGISTRATION ═══════════════════════ -->
+<section class="registration-section" id="register">
+  <div class="container">
+    <h2 class="fade-up">Reserve your seat</h2>
+
+    <form class="reg-form fade-up" onsubmit="event.preventDefault(); alert('Registration form submitted — Stripe integration pending.');">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fname">First Name *</label>
+          <input type="text" id="fname" name="fname" required>
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name *</label>
+          <input type="text" id="lname" name="lname" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="company">Company *</label>
+          <input type="text" id="company" name="company" required>
+        </div>
+        <div class="form-group">
+          <label for="title">Job Title *</label>
+          <input type="text" id="title" name="title" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="teamsize">Team Size *</label>
+          <select id="teamsize" name="teamsize" required>
+            <option value="">Select...</option>
+            <option value="1">Just me</option>
+            <option value="2-4">2–4</option>
+            <option value="5+">5+</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="promo">Promo Code</label>
+          <input type="text" id="promo" name="promo" placeholder="Optional">
+        </div>
+      </div>
+      <div class="form-row full">
+        <div class="form-group">
+          <label for="automate">What process would you most like to automate with AI? *</label>
+          <textarea id="automate" name="automate" required placeholder="Tell us about a task or workflow you'd love to hand off..."></textarea>
+        </div>
+      </div>
+      <div class="form-row full">
+        <div class="form-group">
+          <label>Select your tier *</label>
+          <div class="pricing-radios">
+            <div class="pricing-radio">
+              <input type="radio" id="tier-early" name="tier" value="early" checked>
+              <label for="tier-early">
+                <span class="radio-tier">Early Bird</span>
+                <span class="radio-price">$950</span>
+              </label>
+            </div>
+            <div class="pricing-radio">
+              <input type="radio" id="tier-standard" name="tier" value="standard">
+              <label for="tier-standard">
+                <span class="radio-tier">Standard</span>
+                <span class="radio-price">$1,250</span>
+              </label>
+            </div>
+            <div class="pricing-radio">
+              <input type="radio" id="tier-team" name="tier" value="team">
+              <label for="tier-team">
+                <span class="radio-tier">Team (5 seats)</span>
+                <span class="radio-price">$5,000</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-submit">
+        <button type="submit" class="btn btn-primary">Complete Registration</button>
+        <!-- PLACEHOLDER: This button will connect to Stripe checkout when Jonas's integration is ready -->
+      </div>
+      <p class="form-note">Secure payment powered by Stripe. Invoice and W-9 available on request.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FIND YOUR CITY ═══════════════════════ -->
+<section class="cities-section section" id="cities">
+  <div class="container">
+    <p class="eyebrow fade-up" style="text-align:center;margin-bottom:16px;">Find your city</p>
+    <h2 class="fade-up">Kansas City is just the beginning.</h2>
+    <p class="cities-sub fade-up">We're bringing the SOAR AI Institute to cities across the country. Reserve your spot and we'll reach out the moment your city goes live.</p>
+
+    <div class="cities-grid fade-up">
+      <div class="city-card active">
+        <p class="city-name">Kansas City</p>
+        <p class="city-status">May 21–22, 2026</p>
+        <a href="#register" class="btn">Register Now</a>
+      </div>
+      <div class="city-card">
+        <p class="city-name">Salt Lake City</p>
+        <p class="city-status">Coming Soon</p>
+        <button class="btn" onclick="openWaitlist('Salt Lake City')">Join Waitlist</button>
+      </div>
+      <div class="city-card">
+        <p class="city-name">Washington, DC</p>
+        <p class="city-status">Coming Soon</p>
+        <button class="btn" onclick="openWaitlist('Washington, DC')">Join Waitlist</button>
+      </div>
+      <div class="city-card">
+        <p class="city-name">New York</p>
+        <p class="city-status">Coming Soon</p>
+        <button class="btn" onclick="openWaitlist('New York')">Join Waitlist</button>
+      </div>
+      <div class="city-card">
+        <p class="city-name">Seattle</p>
+        <p class="city-status">Coming Soon</p>
+        <button class="btn" onclick="openWaitlist('Seattle')">Join Waitlist</button>
+      </div>
+      <div class="city-card">
+        <p class="city-name">Austin</p>
+        <p class="city-status">Coming Soon</p>
+        <button class="btn" onclick="openWaitlist('Austin')">Join Waitlist</button>
+      </div>
+      <div class="city-card">
+        <p class="city-name">Orlando</p>
+        <p class="city-status">Coming Soon</p>
+        <button class="btn" onclick="openWaitlist('Orlando')">Join Waitlist</button>
+      </div>
+    </div>
+
+    <p class="cities-cta fade-up">Can't find your city? <a href="mailto:institute@soar.com">Tell us where you are</a> — we'll find our way there.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FAQ ═══════════════════════ -->
+<section class="faq-section section" id="faq">
+  <div class="container">
+    <h2 class="fade-up">Questions? We've got answers.</h2>
+    <div class="faq-list fade-up">
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
+          Do I need to know how to code?
+          <span class="material-symbols-outlined">add</span>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">
+          No. The tools we use are designed for business professionals. If you can describe what you want in plain English, you can build with these tools. Paul and Ryan guide you through every step — no technical background required.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
+          What should I bring?
+          <span class="material-symbols-outlined">add</span>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">
+          A laptop with a browser. We'll help you set up accounts and tools on day one. If you want to connect your assistant to your existing business tools (email, calendar, CRM), bring your login credentials for those.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
+          What do I take home?
+          <span class="material-symbols-outlined">add</span>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">
+          A working AI assistant configured on your real business data, a 1-year Workplace AI subscription, a certificate of completion, and access to the alumni community for ongoing support.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
+          Can my company pay for this?
+          <span class="material-symbols-outlined">add</span>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">
+          Yes. Early bird pricing ($950) is below the $1,000 threshold that most companies can approve without executive sign-off. We provide a detailed invoice and W-9 on request. For teams of 5+, the team bundle brings the per-seat cost to $1,000.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
+          What if I need help after the course?
+          <span class="material-symbols-outlined">add</span>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">
+          You get 30 days of direct Q&A access with Paul and Ryan, plus permanent access to the alumni community where graduates help each other. You won't be on your own.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
+          Is this just ChatGPT prompt training?
+          <span class="material-symbols-outlined">add</span>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">
+          No. You will build and deploy a custom AI assistant specific to your business. Prompt engineering is one small piece. You'll also configure automations, connect real data sources, and deploy something your team can use immediately. This is building, not typing.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
+          What kinds of problems can my AI assistant solve?
+          <span class="material-symbols-outlined">add</span>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">
+          Anything that involves repetitive work, information gathering, drafting, summarizing, or organizing. Common examples include meeting notes and follow-ups, report generation, email drafting, project coordination, research synthesis, and document preparation. If it's on your to-do list and it feels like it shouldn't need you personally, it's a strong candidate.
+        </div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FOOTER CTA ═══════════════════════ -->
+<section class="footer-cta">
+  <div class="container">
+    <h2 class="fade-up">Two days. Your first AI assistant.<br>Built around your business.</h2>
+    <p class="fade-up">May 21–22, Kansas City. Early bird pricing won't last.</p>
+    <a href="#register" class="btn btn-primary fade-up" style="transition-delay:0.1s;">Reserve Your Seat — $950</a>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <svg viewBox="0 0 98.2 142.65" xmlns="http://www.w3.org/2000/svg" style="height:22px;width:auto;">
+          <path fill="#e57e61" d="M73.35,78.48c4.3,21.62,3.91,36.66-13.2,51.9-7.5,6.68-16.42,11.12-26.43,12.13-12.86,1.3-24.08-6.68-26.62-19.28-2.89-14.38,25.95-17.09,39.56-19.59l20.66-3.8c1.69-15.89-12.99-49.53-2.41-55.74,12.18-7.15,40.38,26.51,31.65,47.27-2.56,6.1-9.03,11.17-15.36,12.21-2.32.38-2.95-2.98-2.84-4.35.15-2,1.5-3.67,3.65-4.63,5.97-2.68,9.31-8.55,7.81-15.25-2.55-11.39-9.83-21.91-20.39-28.29-.4,9.77,2.14,18.39,3.93,27.41ZM32.43,134.29c14.71-1.63,27.39-11.55,33.21-25.3l-32.75,5.36c-4.91.8-9.36,2.05-13.81,4.21-1.28.77-3.77,2.18-3.38,4.12,1.48,7.35,8.52,12.52,16.74,11.6Z"/>
+          <path fill="#e57e61" d="M.66,65.76c-2.52-11.16,2.32-20.79,12.1-25.34,1.63-.76,3.54-2.35,5.6-.98,2.31,1.54,2.15,6.7-.75,7.86-6.74,2.7-10.78,8.85-8.97,16.38,2.69,11.16,9.73,21.23,20.17,27.87.79-8.37-1.33-15.99-3.05-23.7-4.02-17.99-5.91-34.97,6.3-49.33C40.32,8.81,50.97,1.85,63.69.22c13.61-1.74,26.24,6.78,27.68,20.67.43,4.13-3.22,7.83-6.68,9.73-13.86,7.63-36.96,7.51-53.71,12.28-1.41,16.22,13.87,51.89,1.53,56.01-4.35,1.45-8.85-.32-12.43-3.17-9.46-7.52-16.68-17.86-19.42-29.99ZM82.63,20.06c-1.26-7.65-8.82-12.69-16.85-11.8-14.5,1.61-27.3,11.73-33.16,25.44l23.63-3.81c8.81-1.42,27.27-4.48,26.38-9.83Z"/>
+        </svg>
+        <span>SOAR AI Institute</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://try.soar.com/privacy/" target="_blank" rel="noopener">Privacy</a>
+        <a href="https://try.soar.com/terms/" target="_blank" rel="noopener">Terms</a>
+        <a href="https://try.soar.com/" target="_blank" rel="noopener">soar.com</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 SOAR AI. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════ MOBILE STICKY CTA ═══════════════════════ -->
+<div class="mobile-sticky">
+  <a href="#register" class="btn btn-primary">Reserve Your Seat — $950</a>
+</div>
+
+<!-- ═══════════════════════ SCRIPTS ═══════════════════════ -->
+<script>
+// Fade-up on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// FAQ accordion
+function toggleFaq(trigger) {
+  const item = trigger.closest('.faq-item');
+  const body = item.querySelector('.faq-body');
+  const isOpen = item.classList.contains('open');
+
+  // Close all
+  document.querySelectorAll('.faq-item.open').forEach(openItem => {
+    openItem.classList.remove('open');
+    openItem.querySelector('.faq-body').style.maxHeight = null;
+    openItem.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+  });
+
+  // Open clicked if it was closed
+  if (!isOpen) {
+    item.classList.add('open');
+    body.style.maxHeight = body.scrollHeight + 'px';
+    trigger.setAttribute('aria-expanded', 'true');
+  }
+}
+
+// Waitlist modal (simple alert placeholder — replace with actual modal/form)
+function openWaitlist(city) {
+  const email = prompt('Enter your email to join the ' + city + ' waitlist:');
+  if (email) {
+    alert('Thanks! We\'ll notify you when ' + city + ' goes live.');
+    // TODO: Connect to actual waitlist backend
+  }
+}
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
